@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Rowdies", cursive;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background: url(images/bg.jpg) center no-repeat;
+  background-size: cover;
+  opacity: 0.9;
+  position: relative;
+}
+
+.menu {
+  width: 3.5rem;
+  height: 1.5rem;
+  position: fixed;
+  top: 5rem;
+  right: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.line {
+  width: 100%;
+  height: 0.3rem;
+  background-color: #818181;
+  transition: transform 0.5s;
+}
+
+.change .line-1 {
+  transform: rotateZ(-495deg) translateX(-0.8rem);
+}
+
+.change .line-2 {
+  transform: rotateZ(-405deg) translateX(0.8rem);
+}
+
+.banner {
+  width: 70rem;
+  color: #fff;
+  position: absolute;
+  top: 30%;
+  left: 30rem;
+}
+
+.banner h1 {
+  font-size: 7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  margin-bottom: 3rem;
+}
+
+.banner p {
+  font-size: 2rem;
+}
+
+.nav {
+  width: 100%;
+  height: 100%;
+  background-color: #08151d;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  left: -100%;
+  transition: left 0.4s;
+}
+
+.change .nav {
+  left: 0;
+}
+
+.nav-item {
+  font-size: 8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.4rem;
+  color: #5a5858;
+  text-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.8);
+  position: relative;
+  overflow: hidden;
+  padding: 0 2rem;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.change .nav-item {
+  opacity: 1;
+  visibility: visible;
+}
+
+.change .nav-item:nth-child(1) {
+  transition: color 0.3s, margin 0.3s, opacity 1s 0.5s;
+}
+
+.change .nav-item:nth-child(2) {
+  transition: color 0.3s, margin 0.3s, opacity 1s 0.6s;
+}
+
+.change .nav-item:nth-child(3) {
+  transition: color 0.3s, margin 0.3s, opacity 1s 0.7s;
+}
+
+.change .nav-item:nth-child(4) {
+  transition: color 0.3s, margin 0.3s, opacity 1s 0.8s;
+}
+
+.change .nav-item:nth-child(5) {
+  transition: color 0.3s, margin 0.3s, opacity 1s 0.9s;
+}
+
+.nav-item:hover {
+  color: #fff;
+  margin: 2rem;
+}
+
+.nav-item::before {
+  content: "";
+  position: absolute;
+  left: -100%;
+  width: 100%;
+  height: 50%;
+  background-color: #fff;
+  transition: left 0.3s 0.1s ease-out;
+}
+
+.nav-item:hover.nav-item::before {
+  left: 100%;
+}
+
+.nav-item::after {
+  content: "";
+  position: absolute;
+  left: -100%;
+  bottom: 0;
+  width: 100%;
+  height: 50%;
+  background-color: #fff;
+  transition: left 0.3s 0.2s ease-out;
+}
+
+.nav-item:hover.nav-item::after {
+  left: 100%;
+}
